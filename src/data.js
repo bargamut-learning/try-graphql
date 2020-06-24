@@ -5,7 +5,7 @@ const users = [
     id: 1,
     fname: 'Richie',
     age: 27,
-    likes: 0,
+    likes: 8,
   },
   {
     id: 2,
@@ -28,12 +28,12 @@ const posts = [
     body: "Hello how are you?"
   },
   {
-    id: 1,
+    id: 2,
     userId: 3,
     body: "What's up?"
   },
   {
-    id: 1,
+    id: 3,
     userId: 1,
     body: "Let's learn GraphQL"
   },

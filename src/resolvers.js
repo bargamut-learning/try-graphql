@@ -1,8 +1,12 @@
 'use strict';
+
+const { PubSub } = require(`apollo-server`);
 const {
 	posts,
 	users,
 } = require(`./data`);
+
+const pubsub = new PubSub();
 
 const resolvers = {
 	Query: {

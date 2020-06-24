@@ -5,7 +5,7 @@
   "author": "Paul Petrov <paul@bargamut.ru>",
   "license": "MIT",
 	"scripts": {
-		"start": "nodemon -e js, json, graphql"
+		"start": "nodemon -e js, json, graphql src/index.js"
 	},
   "dependencies": {
     "apollo-server": "^2.15.0",

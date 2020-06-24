@@ -1,0 +1,5 @@
+POST http://localhost:4000/ HTTP/1.1
+# X-Request-Type: GraphQL
+Content-Type: application/json
+
+{"query":"query{posts(id: 1) {id body user {fname}}}"}

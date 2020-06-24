@@ -21,12 +21,13 @@ const typeDefs = gql`
     users(id: Int!): User!
     posts(id: Int!): Post!
   }
+	
   type Mutation {
-    incrementLike(fname: String!) : [User!]
+    incrementLike(fname: String!): [User!]
   }
 
   type Subscription {
-    listenLikes : [User]
+    listenLikes: [User]
   }
 `;
 

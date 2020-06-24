@@ -1,35 +1,13 @@
 'use strict';
 
-const {gql} = require(`apollo-server`);
+const fs = require(`fs`);
+const path = require(`path`);
+const { gql } = require(`apollo-server`);
 
-const typeDefs = gql`
-  type User {
-    id: Int
-    fname: String
-    age: Int
-    likes: Int
-    posts: [Post]
-  }
+const PATH_GQL_SCHEMA = path.resolve(__dirname, `schema.graphql`);
+const schema = fs.readFileSync(PATH_GQL_SCHEMA, `utf8`);
 
-  type Post {
-    id: Int
-    user: User
-    body: String
-  }
-
-  type Query {
-    users(id: Int!): User!
-    posts(id: Int!): Post!
-  }
-	
-  type Mutation {
-    incrementLike(fname: String!): [User!]
-  }
-
-  type Subscription {
-    listenLikes: [User]
-  }
-`;
+const typeDefs = gql`${schema}`;
 
 module.exports = {
 	typeDefs,
